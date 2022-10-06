@@ -1,0 +1,39 @@
+{
+  "name": "advlib-eep-4bs",
+  "homepage": "https://github.com/reelyactive/advlib-eep-4bs/",
+  "author": {
+    "name": "reelyActive",
+    "email": "info@reelyactive.com"
+  },
+  "description": "Wireless advertising packet decoding library for EnOcean Equipment Profile 4BS telegrams.  We believe in an open Internet of Things.",
+  "keywords": [
+    "reelyActive",
+    "advlib",
+    "EnOcean",
+    "EEP",
+    "4BS",
+    "payload processor",
+    "library"
+  ],
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "./lib/advlibeep4bs.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/advlib-eep-4bs.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "^6.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/reelyactive/advlib-eep-4bs/issues"
+  },
+  "contributors": [
+    { "name": "Jeffrey Dungen" }
+  ],
+  "license": "MIT"
+}
