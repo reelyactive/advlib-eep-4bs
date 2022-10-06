@@ -12,7 +12,7 @@ Installation
     npm install advlib-eep-4bs
 
 
-Hello advlib-eep-vld!
+Hello advlib-eep-4bs!
 ---------------------
 
 ```javascript
