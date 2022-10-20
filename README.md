@@ -45,6 +45,7 @@ The following EEPs are currently supported by __advlib-eep-4bs__.
 | A5-04-02 | Temperature and Humidity | temperaturehumiditysensor.js |
 | A5-04-03 | Temperature and Humidity | temperaturehumiditysensor.js |
 | A5-04-04 | Temperature and Humidity | temperaturehumiditysensor.js |
+| A5-09-04 | Gas Sensor               | gassensor.js                 |
 
 
 Contributing

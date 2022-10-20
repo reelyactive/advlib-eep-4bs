@@ -14,6 +14,8 @@ const INPUT_DATA_INVALID_HEX_STRING = 'xyz';
 const INPUT_DATA_TOO_SHORT_BUFFER = Buffer.from('', 'hex');
 const INPUT_DATA_TEMPERATURE_HUMIDITY_EEP_TYPE = 'A5-04-03';
 const INPUT_DATA_TEMPERATURE_HUMIDITY = 'a595020e090517006980';
+const INPUT_DATA_CARBON_DIOXIDE_EEP_TYPE = 'A5-09-04';
+const INPUT_DATA_CARBON_DIOXIDE = 'a58a634c090517006980';
 
 
 // Expected outputs for the scenario
@@ -21,6 +23,11 @@ const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_TEMPERATURE_HUMIDITY = {
     relativeHumidity: 58.431372549019606,
     temperature: 21.09375
+}
+const EXPECTED_DATA_CARBON_DIOXIDE = {
+    carbonDioxideConcentration: 990,
+    relativeHumidity: 69,
+    temperature: 15.2
 }
 
 
@@ -44,6 +51,14 @@ describe('advlib-eep-4bs', function() {
                                        INPUT_DATA_TEMPERATURE_HUMIDITY_EEP_TYPE,
                                        INPUT_DATA_TEMPERATURE_HUMIDITY),
                                        EXPECTED_DATA_TEMPERATURE_HUMIDITY);
+  });
+
+  // Test the process function with valid carbon dioxide data
+  it('should handle valid carbon dioxide data as input', function() {
+    assert.deepEqual(advlib.process4BSTelegram(
+                                       INPUT_DATA_CARBON_DIOXIDE_EEP_TYPE,
+                                       INPUT_DATA_CARBON_DIOXIDE),
+                                       EXPECTED_DATA_CARBON_DIOXIDE);
   });
 
 });
