@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2022
+ * Copyright reelyActive 2022-2023
  * We believe in an open Internet of Things
  */
 
@@ -14,6 +14,8 @@ const INPUT_DATA_INVALID_HEX_STRING = 'xyz';
 const INPUT_DATA_TOO_SHORT_BUFFER = Buffer.from('', 'hex');
 const INPUT_DATA_TEMPERATURE_HUMIDITY_EEP_TYPE = 'A5-04-03';
 const INPUT_DATA_TEMPERATURE_HUMIDITY = 'a595020e090517006980';
+const INPUT_DATA_OCCUPANCY_EEP_TYPE = 'A5-07-03';
+const INPUT_DATA_OCCUPANCY = 'a5a5f9c0880517006980';
 const INPUT_DATA_CARBON_DIOXIDE_EEP_TYPE = 'A5-09-04';
 const INPUT_DATA_CARBON_DIOXIDE = 'a58a634c090517006980';
 
@@ -23,6 +25,11 @@ const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_TEMPERATURE_HUMIDITY = {
     relativeHumidity: 58.431372549019606,
     temperature: 21.09375
+}
+const EXPECTED_DATA_OCCUPANCY = {
+    isMotionDetected: [ true ],
+    illuminance: 999,
+    batteryVoltage: 3.3
 }
 const EXPECTED_DATA_CARBON_DIOXIDE = {
     carbonDioxideConcentration: 990,
@@ -51,6 +58,14 @@ describe('advlib-eep-4bs', function() {
                                        INPUT_DATA_TEMPERATURE_HUMIDITY_EEP_TYPE,
                                        INPUT_DATA_TEMPERATURE_HUMIDITY),
                                        EXPECTED_DATA_TEMPERATURE_HUMIDITY);
+  });
+
+  // Test the process function with valid occupancy data
+  it('should handle valid occupancy data as input', function() {
+    assert.deepEqual(advlib.process4BSTelegram(
+                                       INPUT_DATA_OCCUPANCY_EEP_TYPE,
+                                       INPUT_DATA_OCCUPANCY),
+                                       EXPECTED_DATA_OCCUPANCY);
   });
 
   // Test the process function with valid carbon dioxide data

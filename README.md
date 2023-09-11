@@ -45,6 +45,9 @@ The following EEPs are currently supported by __advlib-eep-4bs__.
 | A5-04-02 | Temperature and Humidity | temperaturehumiditysensor.js |
 | A5-04-03 | Temperature and Humidity | temperaturehumiditysensor.js |
 | A5-04-04 | Temperature and Humidity | temperaturehumiditysensor.js |
+| A5-07-01 | Occupancy Sensor         | occupancysensor.js           |
+| A5-07-02 | Occupancy Sensor         | occupancysensor.js           |
+| A5-07-03 | Occupancy Sensor         | occupancysensor.js           |
 | A5-09-04 | Gas Sensor               | gassensor.js                 |
 
 
@@ -67,7 +70,7 @@ License
 
 MIT License
 
-Copyright (c) 2022 [reelyActive](https://www.reelyactive.com)
+Copyright (c) 2022-2023 [reelyActive](https://www.reelyactive.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
