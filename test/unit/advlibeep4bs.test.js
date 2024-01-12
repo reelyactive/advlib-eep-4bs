@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2022-2023
+ * Copyright reelyActive 2022-2024
  * We believe in an open Internet of Things
  */
 
@@ -18,6 +18,8 @@ const INPUT_DATA_OCCUPANCY_EEP_TYPE = 'A5-07-03';
 const INPUT_DATA_OCCUPANCY = 'a5a5f9c0880517006980';
 const INPUT_DATA_CARBON_DIOXIDE_EEP_TYPE = 'A5-09-04';
 const INPUT_DATA_CARBON_DIOXIDE = 'a58a634c090517006980';
+const INPUT_DATA_VIBRATION_TILT_EEP_TYPE = 'A5-14-05';
+const INPUT_DATA_VIBRATION_TILT = 'a5a500000a0517006980';
 
 
 // Expected outputs for the scenario
@@ -35,6 +37,10 @@ const EXPECTED_DATA_CARBON_DIOXIDE = {
     carbonDioxideConcentration: 990,
     relativeHumidity: 69,
     temperature: 15.2
+}
+const EXPECTED_DATA_VIBRATION_TILT = {
+    isMotionDetected: [ true ],
+    batteryVoltage: 3.3
 }
 
 
@@ -74,6 +80,14 @@ describe('advlib-eep-4bs', function() {
                                        INPUT_DATA_CARBON_DIOXIDE_EEP_TYPE,
                                        INPUT_DATA_CARBON_DIOXIDE),
                                        EXPECTED_DATA_CARBON_DIOXIDE);
+  });
+
+  // Test the process function with valid vibration/tilt data
+  it('should handle valid vibration/tilt data as input', function() {
+    assert.deepEqual(advlib.process4BSTelegram(
+                                       INPUT_DATA_VIBRATION_TILT_EEP_TYPE,
+                                       INPUT_DATA_VIBRATION_TILT),
+                                       EXPECTED_DATA_VIBRATION_TILT);
   });
 
 });
