@@ -3,6 +3,8 @@ advlib-eep-4bs
 
 Wireless advertising packet decoding library for EnOcean Equipment Profiles of 4-byte sensor data (4BS).  __advlib-eep-4bs__ is typically used as a library for [advlib-esp](https://github.com/reelyactive/advlib-esp) which itself is commonly a processor module of the protocol-agnostic [advlib](https://github.com/reelyactive/advlib).
 
+![Overview of advlib-eep-4bs](https://reelyactive.github.io/advlib-eep-4bs/images/overview.png)
+
 __advlib-eep-4bs__ is a lightweight [Node.js package](https://www.npmjs.com/package/advlib-eep-4bs) with no dependencies.  See also its sister libraries [advlib-eep-vld](https://github.com/reelyactive/advlib-eep-vld) and [advlib-eep-rps](https://github.com/reelyactive/advlib-eep-rps).
 
 
@@ -50,6 +52,8 @@ The following EEPs are currently supported by __advlib-eep-4bs__.
 | A5-07-03 | Occupancy Sensor         | occupancysensor.js           |
 | A5-09-04 | Gas Sensor               | gassensor.js                 |
 | A5-14-05 | Vibration/Tilt Sensor    | multifuncsensor.js           |
+
+See [www.reelyactive.com/pareto/anywhere/devices/enocean-alliance/](https://www.reelyactive.com/pareto/anywhere/devices/enocean-alliance/) for a list of all EEPs supported by our [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source IoT middleware.
 
 
 Contributing
