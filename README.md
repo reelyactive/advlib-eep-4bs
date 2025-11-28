@@ -50,6 +50,9 @@ The following EEPs are currently supported by __advlib-eep-4bs__.
 | A5-07-01 | Occupancy Sensor         | occupancysensor.js           |
 | A5-07-02 | Occupancy Sensor         | occupancysensor.js           |
 | A5-07-03 | Occupancy Sensor         | occupancysensor.js           |
+| A5-08-01 | Light, Temperature and Occupancy Sensor | lighttemperatureoccupancysensor.js |
+| A5-08-02 | Light, Temperature and Occupancy Sensor | lighttemperatureoccupancysensor.js |
+| A5-08-03 | Light, Temperature and Occupancy Sensor | lighttemperatureoccupancysensor.js |
 | A5-09-04 | Gas Sensor               | gassensor.js                 |
 | A5-14-05 | Vibration/Tilt Sensor    | multifuncsensor.js           |
 
