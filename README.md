@@ -5,7 +5,7 @@ Wireless advertising packet decoding library for EnOcean Equipment Profiles of 4
 
 ![Overview of advlib-eep-4bs](https://reelyactive.github.io/advlib-eep-4bs/images/overview.png)
 
-__advlib-eep-4bs__ is a lightweight [Node.js package](https://www.npmjs.com/package/advlib-eep-4bs) with no dependencies.  See also its sister libraries [advlib-eep-vld](https://github.com/reelyactive/advlib-eep-vld) and [advlib-eep-rps](https://github.com/reelyactive/advlib-eep-rps).
+__advlib-eep-4bs__ is a lightweight [Node.js package](https://www.npmjs.com/package/advlib-eep-4bs) with no dependencies.  See also its sister libraries [advlib-eep-vld](https://github.com/reelyactive/advlib-eep-vld), [advlib-eep-rps](https://github.com/reelyactive/advlib-eep-rps) and [advlib-eep-msc](https://github.com/reelyactive/advlib-eep-msc).
 
 
 Installation
